@@ -1,0 +1,23 @@
+/* ---- nav hover样式 ---- */
+.FX_theme_nav_link span {
+  transition: 0.5s;
+}
+
+.FX_theme_nav_link:hover span {
+  color: var(--theme-color)
+}
+
+.theme_nav_selected {
+  color: var(--theme-color);
+  position: relative;
+}
+
+.theme_nav_selected::before {
+  content: '';
+  position: absolute;
+  top: calc(50% + 16px);
+  left: 8px;
+  right: 8px;
+  height: 1px;
+  background-color: var(--theme-color);
+}

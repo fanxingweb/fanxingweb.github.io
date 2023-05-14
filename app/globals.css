@@ -1,11 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '@/styles/animation.css';
+@import '@/styles/hover.css';
+
+/* 阿里巴巴矢量图标库 */
+@import url('@/styles/iconfont.css');
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --theme-color: #8c4356;
+  --theme-color-rgb: 140, 67, 86;
+  --theme-background: #000;
+  --theme-background-rgb: 0, 0, 0;
+  --theme-nav-color: #a0a0a0;
+  --theme-nav-color-rgb: 160, 160, 160;
+  --theme-nav-color-select: #ededed;
+  --theme-nav-color-select-rgb: 237, 237, 237;
+  --theme-menu-color: #888;
+  --theme-menu-color-rgb: 136, 136, 136;
+  --section-width: 960px;
+  --light-h4: #ccd6f6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +35,74 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+section {
+  width: var(--section-width);
+  height: calc(100vh - 88px - 88px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  color: rgba(var(--theme-color-rgb, 0.8));
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: var(--light-h4);
+}
+
+/* ---- 透明背景下模糊滤镜 ---- */
+.opacity-bg-filter::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  backface-visibility: hidden;
+  perspective: 1000;
+  z-index: -1;
+  top: -1px;
+  transform: translateZ(0);
+}
+
+/* ---- 自定义滚动条 ---- */
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #333;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #666;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+
+/* ---- 加载logo ---- */
+#progress {
+  stroke-dasharray: 269;
+  stroke-dashoffset: 269;
+}
+
+.loading_animate_wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text {
+  opacity: 0;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
 }

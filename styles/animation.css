@@ -1,0 +1,47 @@
+/* 渐进式动画 */
+.display-opacity-0 {
+  opacity: 0;
+}
+
+.progressive-display {
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 加载logo */
+.loading_animate_wrapper-hidden {
+  animation: zoomHide 0.8s forwards;
+}
+
+.logo-text-show {
+  animation: textShow 1s forwards;
+}
+
+@keyframes textShow {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes zoomHide {
+  from {
+    transform: scale(1)
+  }
+
+  to {
+    transform: scale(0)
+  }
+}
