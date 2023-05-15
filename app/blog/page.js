@@ -4,16 +4,7 @@ import matter from 'gray-matter';
 import { menuLinks } from '@/lib/data-config'
 import BlogList from '@/components/blogList'
 
-export default function Blog({ notes }) {
-  return (
-    <div className='flex flex-col'>
-      <h1 className='blog-h1'>Blog</h1>
-      <BlogList notes={notes} />
-    </div>
-  );
-}
-
-export async function getStaticProps() {
+export default function Blog() {
   const notesTmp = {}
   menuLinks.forEach((c) => {
     const notesDirectory = path.join(process.cwd(), `notes/${c.title.toLocaleLowerCase()}`)
@@ -35,7 +26,10 @@ export async function getStaticProps() {
 
   const notes = Object.values(notesTmp).flat(Infinity).sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()))
 
-  return {
-    props: { notes },
-  };
+  return (
+    <div className='flex flex-col'>
+      <h1 className='blog-h1'>Blog</h1>
+      <BlogList notes={notes} />
+    </div>
+  );
 }
