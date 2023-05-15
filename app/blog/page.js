@@ -4,8 +4,9 @@ import matter from 'gray-matter';
 import { menuLinks } from '@/lib/data-config'
 import BlogList from '@/components/blogList'
 
-export default function Blog() {
+export default function Page() {
   const notesTmp = {}
+
   menuLinks.forEach((c) => {
     const notesDirectory = path.join(process.cwd(), `notes/${c.title.toLocaleLowerCase()}`)
     const filenames = fs.readdirSync(notesDirectory)
