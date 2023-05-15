@@ -8,7 +8,7 @@
 }
 
 .theme_nav_selected {
-  color: var(--theme-color);
+  color: var(--theme-color) !important;
   position: relative;
 }
 
@@ -20,4 +20,14 @@
   right: 8px;
   height: 1px;
   background-color: var(--theme-color);
+}
+
+/* ---- blog列表标题 ---- */
+.blog-h2 {
+  font-size: 18px;
+  transition: all 0.5s;
+}
+
+.blog-h2:hover {
+  color: var(--theme-color);
 }

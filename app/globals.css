@@ -8,9 +8,9 @@
 @import url('@/styles/iconfont.css');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
   --theme-color: #8c4356;
   --theme-color-rgb: 140, 67, 86;
   --theme-background: #000;
@@ -21,17 +21,17 @@
   --theme-nav-color-select-rgb: 237, 237, 237;
   --theme-menu-color: #888;
   --theme-menu-color-rgb: 136, 136, 136;
-  --section-width: 960px;
+  --section-width: 60rem;
   --light-h4: #ccd6f6;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -57,6 +57,12 @@ h1 {
 h4 {
   font-size: 1.2rem;
   color: var(--light-h4);
+}
+
+/* ---- blog 列表 ---- */
+.blog-link-date {
+  color: var(--theme-nav-color);
+  font-size: 14px;
 }
 
 /* ---- 透明背景下模糊滤镜 ---- */

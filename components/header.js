@@ -1,8 +1,8 @@
 'use client'
+import { useEffect } from 'react'
 import cls from 'classnames'
 import Link from 'next/link'
 import NavLink from './navLink'
-import { useEffect } from 'react'
 import { useCurrentRoute } from '@/lib/hooks'
 import { useProgressiveDisplay } from '@/lib/animation'
 import { headerLinks } from '@/lib/data-config'
@@ -11,7 +11,6 @@ import styles from '@/styles/layout.module.css'
 export default function Header() {
   const [currentRoute] = useCurrentRoute()
   const [isDisplay, display] = useProgressiveDisplay(styles.Header_nav) // 渐显动画
-
   useEffect(() => { display() }, [])
 
   return (
