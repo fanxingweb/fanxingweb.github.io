@@ -59,10 +59,14 @@ h4 {
   color: var(--light-h4);
 }
 
+.blog-list {
+  max-width: 60rem;
+}
+
 /* ---- blog 列表 ---- */
 .blog-link-date {
   color: var(--theme-nav-color);
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
 /* ---- 透明背景下模糊滤镜 ---- */
