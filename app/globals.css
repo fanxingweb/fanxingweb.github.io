@@ -41,7 +41,7 @@ body {
 }
 
 section {
-  width: var(--section-width);
+  /* width: var(--section-width); */
   height: calc(100vh - 88px - 88px);
   margin: 0 auto;
   overflow: hidden;
