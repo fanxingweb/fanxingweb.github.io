@@ -60,10 +60,6 @@ h4 {
   color: var(--light-h4);
 }
 
-.blog-list {
-  max-width: 60rem;
-}
-
 /* ---- blog 列表 ---- */
 .blog-wrapper {
   /* width: 960px; */

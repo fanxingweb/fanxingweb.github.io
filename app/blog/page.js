@@ -28,8 +28,8 @@ export default function Page() {
   const notes = Object.values(notesTmp).flat(Infinity).sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()))
 
   return (
-    <div className='flex flex-col w-full blog-list'>
-      <h1 className='blog-h1'>Blog</h1>
+    <div className='flex flex-col w-full py-2 blog-list'>
+      {/* <h1 className='blog-h1'>Blog</h1> */}
       <BlogList notes={notes} />
     </div>
   );

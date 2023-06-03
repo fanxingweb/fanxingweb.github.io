@@ -5,10 +5,12 @@ import { menuLinks } from '@/lib/data-config'
 import cls from 'classnames'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation';
+import { useSelectedLayoutSegments } from 'next/navigation'
 
 export default function BlogMenu() {
   const currentRoute = usePathname()
   const router = useRouter()
+  const segments = useSelectedLayoutSegments()
 
   return (
     <div className={styles.blog_menu_wrapper}>
@@ -26,6 +28,11 @@ export default function BlogMenu() {
           </li>
         ))}
       </ul>
+      <span
+        onClick={() => router.back()}
+        className={cls('', { hidden: segments.length < 2 })}
+        style={{ whiteSpace: 'nowrap', cursor: 'pointer', lineHeight: '4rem' }}
+      >返回</span>
     </div>
   );
 }
