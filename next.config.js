@@ -3,7 +3,8 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   experimental: {
-    dynamicImport: true
+    dynamicImport: true,
+    appDir: true,
   },
 }
 
