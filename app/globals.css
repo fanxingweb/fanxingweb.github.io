@@ -34,6 +34,7 @@
 } */
 
 body {
+  font-family: Arial, sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
@@ -64,6 +65,23 @@ h4 {
 }
 
 /* ---- blog 列表 ---- */
+.blog-wrapper {
+  /* width: 960px; */
+  width: 70vw;
+  min-width: 30rem;
+  padding: 20px 34px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  color: #fff;
+  background-color: rgba(17, 17, 17, 0.8);
+  border-radius: 20px;
+  box-shadow:
+    2px 0 12px rgba(255, 255, 255, 0.3),
+    0 0 12px rgba(34, 34, 34, 0.1),
+    inset 0 0 8px rgba(34, 34, 34, 0.6);
+}
+
 .blog-link-date {
   color: var(--theme-nav-color);
   font-size: 0.85rem;
@@ -114,5 +132,4 @@ body::-webkit-scrollbar-thumb {
 .logo-text {
   opacity: 0;
   font-weight: 600;
-  font-family: Arial, sans-serif;
 }

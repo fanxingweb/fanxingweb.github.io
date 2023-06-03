@@ -25,12 +25,12 @@
 }
 
 .icon-logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   transition-delay: 0.05s;
 }
 
 .icon-menu {
-  font-size: 25px;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: all 0.5s;
   position: relative;
