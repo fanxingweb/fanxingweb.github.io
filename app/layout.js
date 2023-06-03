@@ -1,8 +1,8 @@
 import './globals.css'
 import Header from '@/components/header'
+import Content from '@/components/content'
 import Footer from '@/components/footer'
 import LoadAnimation from '@/components/loadAnimation'
-import Content from '@/components/content'
 
 export const metadata = {
   title: "Fanxing's Web",
