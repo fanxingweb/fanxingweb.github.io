@@ -1,7 +1,9 @@
-import { getNoteListStaticPaths } from '@/lib/tool'
+import BlogList from '@/components/blogList'
+import { getNoteListStaticPaths, getNotesListStaticProps } from '@/lib/tool'
 
 export default function Page({ params }) {
-  return <h1>{params.slug}</h1>
+  const notes = getNotesListStaticProps(params.slug)
+  return <BlogList notes={notes} />
 }
 
 export async function getStaticPaths() {

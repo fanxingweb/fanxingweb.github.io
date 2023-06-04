@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import '@/styles/animation.css';
 @import '@/styles/hover.css';
+@import '@/styles/markdown-github.css';
 
 /* 阿里巴巴矢量图标库 */
 @import url('@/styles/iconfont.css');
@@ -48,14 +49,14 @@ section {
   overflow: hidden;
 }
 
-h1 {
+section h1 {
   font-size: 2.5rem;
   line-height: 4rem;
   color: rgba(var(--theme-color-rgb, 0.8));
   font-weight: 600;
 }
 
-h4 {
+section h4 {
   font-size: 1.2rem;
   color: var(--light-h4);
 }
@@ -81,6 +82,13 @@ h4 {
 .blog-link-date {
   color: var(--theme-nav-color);
   font-size: 0.85rem;
+}
+
+.blog-title {
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 2rem;
+  color: var(--theme-color);
 }
 
 /* ---- 透明背景下模糊滤镜 ---- */
