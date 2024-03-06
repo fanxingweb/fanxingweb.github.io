@@ -54,11 +54,11 @@ export default function LoadAnimation({ children }) {
             <div className='loading_animate_wrapper'>
               <svg viewBox="0 0 84 96" width="100" height="100">
                 <polygon id='progress' stroke="#8c4356" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" points="39 2 0 22 0 67 39 90 78 68 78 23" fill='none' ></polygon>
-                <text className='logo-text' x='39' y='48' fontSize='20' fill="#8c4356" textAnchor="middle" alignmentBaseline="middle">FX</text>
+                <text className='logo-text' x='39' y='48' fontSize='30' fill="#8c4356" textAnchor="middle" alignmentBaseline="middle">X</text>
               </svg>
             </div>
           </div>
-        ) : children
+        ) : <div className='next-document-wrapper'>{children}</div>
       }
     </>
   )

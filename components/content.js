@@ -5,7 +5,6 @@ import cls from 'classnames'
 
 export default function Content({ children }) {
   const segments = useSelectedLayoutSegments()
-
   useEffect(() => {
     import('@/lib/bgParticle').then(({ default: BGParticle }) => {
       const particle = new BGParticle('__next_background')
@@ -23,7 +22,7 @@ export default function Content({ children }) {
       >
         {children}
       </main>
-      <div id='__next_background' style={segments.length ? { position: 'absolute', zIndex: -1 } : { display: 'none' }} />
+      <div id='__next_background' style={segments.length ? { position: 'fixed', zIndex: -1 } : { display: 'none' }} />
     </>
   )
 }

@@ -22,6 +22,11 @@ export default function Home() {
         <h1>Liu Taiqiang,</h1>
         <h1>This is my personal learning record website.</h1>
       </section>
+      <section className='display-opacity-0'>
+        <h4 style={{ margin: '20% 0 1.5rem' }}>Hi, my name is</h4>
+        <h1>Liu Taiqiang,</h1>
+        <h1>This is my personal learning record website.</h1>
+      </section>
     </>
   )
 }

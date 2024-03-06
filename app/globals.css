@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import '@/styles/animation.css';
 @import '@/styles/hover.css';
-@import '@/styles/markdown-github.css';
+@import '@/styles/github-markdown.css';
 
 /* 阿里巴巴矢量图标库 */
 @import url('@/styles/iconfont.css');
@@ -44,9 +44,13 @@ body {
 
 section {
   /* width: var(--section-width); */
-  height: calc(100vh - 88px - 88px);
+  height: calc(100vh - 5rem);
   margin: 0 auto;
   overflow: hidden;
+}
+
+section:last-child {
+  height: calc(100vh - 10rem);
 }
 
 section h1 {
@@ -110,6 +114,7 @@ section h4 {
 body::-webkit-scrollbar {
   width: 8px;
   background-color: #333;
+  display: none; /* 隐藏滚动条 */
 }
 
 body::-webkit-scrollbar-track {
