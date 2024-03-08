@@ -1,8 +1,30 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect,  } from 'react'
+import { schemeMapping } from '@/lib/data-config';
 
 export default function LoadAnimation({ children }) {
   const [initLoading, setInitLoading] = useState(true);
+  const [schemeColor, setSchemeColor] = useState('#8c4356');
+
+  function getColorScheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // 深色模式
+      return 'dark';
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      // 浅色模式
+      return 'light';
+    } else {
+      // 颜色模式未知或浏览器不支持prefers-color-scheme
+      return 'no-preference';
+    }
+  }
+
+  useEffect(() => {
+    const currentScheme = getColorScheme();
+    const color = schemeMapping?.[currentScheme];
+    
+    if(color) setSchemeColor(color);
+  }, [])
 
   useEffect(() => {
     const progressDom = document.getElementById('progress')
@@ -53,8 +75,8 @@ export default function LoadAnimation({ children }) {
           <div className='h-screen flex justify-center items-center'>
             <div className='loading_animate_wrapper'>
               <svg viewBox="0 0 84 96" width="100" height="100">
-                <polygon id='progress' stroke="#8c4356" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" points="39 2 0 22 0 67 39 90 78 68 78 23" fill='none' ></polygon>
-                <text className='logo-text' x='39' y='48' fontSize='30' fill="#8c4356" textAnchor="middle" alignmentBaseline="middle">X</text>
+                <polygon id='progress' stroke={schemeColor} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" points="39 2 0 22 0 67 39 90 78 68 78 23" fill='none' ></polygon>
+                <text className='logo-text' x='39' y='48' fontSize='30' fill={schemeColor} textAnchor="middle" alignmentBaseline="middle">X</text>
               </svg>
             </div>
           </div>

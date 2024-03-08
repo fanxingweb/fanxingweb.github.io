@@ -1,11 +1,13 @@
 /* ---- Header 样式 ---- */
 .Header_wrapper {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(var(--background-color-rgb), .5);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+  border-bottom: var(--header-border-bottom);
+  box-shadow: var(--header-box-shadow);
 }
 
 .Header_container {
@@ -25,6 +27,7 @@
 .Logo_wrapper {
   display: flex;
   align-items: center;
+  color: var(--logo-color);
 }
 
 .Logo_title {
@@ -50,7 +53,7 @@
 .nav-link {
   padding: 0 8px;
   opacity: 0;
-  color: var(--theme-nav-color);
+  color: var(--nav-color);
 }
 
 
@@ -60,7 +63,7 @@
   overflow: hidden;
   text-align: left;
   font-size: .9rem;
-  color: var(--theme-menu-color);
+  color: var(--menu-color);
   display: flex;
   align-items: center;
   position: relative;
