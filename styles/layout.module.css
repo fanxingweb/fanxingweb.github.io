@@ -48,6 +48,13 @@
   display: flex;
   justify-content: center;
   line-height: 5rem;
+  position: relative;
+}
+
+.Header_theme_button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .nav-link {

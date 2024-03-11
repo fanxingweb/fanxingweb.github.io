@@ -8,7 +8,7 @@
 /* 阿里巴巴矢量图标库 */
 @import url('@/styles/iconfont.css');
 
-:root {
+:root, body.dark {
   /* background color */
   --background-color: #000;
   --background-color-rgb: 0, 0, 0;
@@ -45,6 +45,44 @@
 
   --header-border-bottom: unset;
   --header-box-shadow: unset;
+
+  --light-h4: #ccd6f6;
+}
+
+body.light {
+  /* background color */
+  --background-color: #fff;
+  --background-color-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+  --blog-background-color: #fff;
+  --blog-background-color-rgb: 255, 255, 255;
+  --blog-box-shadow: 2px 0 12px rgba(255, 255, 255, 0.3);
+
+  /* font color */
+  --font-color: #000;
+  --font-color-rgb: 0, 0, 0;
+
+  /* theme color */
+  --theme-color: #1e80ff;
+  --theme-color-rgb: 30, 128, 255;
+
+  /* logo color */
+  --logo-color: #515767;
+  --logo-color-rgb: 81, 87, 103;
+
+  /* nav color */
+  --nav-color: #515767;
+  --nav-color-rgb: 81, 87, 103;
+  /* --nav-color-select: #ededed;
+  --nav-color-select-rgb: 237, 237, 237; */
+
+  /* menu color */
+  --menu-color: #515767;
+  --menu-color-rgb: 81, 87, 103;
+
+  --header-border-bottom: 1px solid #ccc;
+  --header-box-shadow: 0 0 2px #888;
 
   --light-h4: #ccd6f6;
 }

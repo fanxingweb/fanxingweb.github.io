@@ -1,7 +1,7 @@
 @font-face {
   font-family: "iconfont";
   /* Project id  */
-  src: url('../public/iconfont.ttf?t=1683555545525') format('truetype');
+  src: url('../public/iconfont.ttf?t=1709891073996') format('truetype');
 }
 
 .iconfont {
@@ -37,10 +37,27 @@
   color: var(--theme-color);
 }
 
+.icon-theme-btn {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
 .icon-menu:hover {
   color: var(--theme-color);
 }
 
 .icon-menu-selected {
   color: var(--theme-color);
+}
+
+.icon-fanhui:before {
+  content: "\e60c";
+}
+
+.icon-mingliangmoshi:before {
+  content: "\e611";
+}
+
+.icon-heianmoshi:before {
+  content: "\e7cb";
 }
