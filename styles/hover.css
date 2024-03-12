@@ -10,6 +10,8 @@
 .theme_nav_selected {
   color: var(--theme-color) !important;
   position: relative;
+  /* 发光阴影 */
+  text-shadow: 0 0 8px var(--theme-color), 0 0 10px var(--theme-color);
 }
 
 .theme_nav_selected::before {

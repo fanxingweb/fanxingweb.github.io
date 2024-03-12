@@ -76,7 +76,7 @@ export default function LoadAnimation({ children }) {
             <div className='loading_animate_wrapper'>
               <svg viewBox="0 0 84 96" width="100" height="100">
                 <polygon id='progress' stroke={schemeColor} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" points="39 2 0 22 0 67 39 90 78 68 78 23" fill='none' ></polygon>
-                <text className='logo-text' x='39' y='48' fontSize='30' fill={schemeColor} textAnchor="middle" alignmentBaseline="middle">X</text>
+                <text className='logo-text' x='39' y='48' fontSize='34' fill={schemeColor} textAnchor="middle" alignmentBaseline="middle">F</text>
               </svg>
             </div>
           </div>
