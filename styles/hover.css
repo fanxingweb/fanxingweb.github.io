@@ -14,7 +14,8 @@
   text-shadow: 0 0 8px var(--theme-color), 0 0 10px var(--theme-color);
 }
 
-.theme_nav_selected::before {
+/* 隐藏选中后的下划线 */
+/* .theme_nav_selected::before {
   content: '';
   position: absolute;
   top: calc(50% + 16px);
@@ -22,7 +23,7 @@
   right: 8px;
   height: 1px;
   background-color: var(--theme-color);
-}
+} */
 
 /* ---- blog列表标题 ---- */
 .blog-h2 {
