@@ -29,7 +29,8 @@ body.dark {
   /* theme color */
   --theme-color: #8c4356;
   --theme-color-rgb: 140, 67, 86;
-
+  --theme-color-slate-rgb: 231, 119, 150;
+  --theme-color-line-rgb: 46, 19, 26;
   --scrollbar-track-bg: #000;
   --scrollbar-thumb-hover-bg: #a2506a;
 
@@ -69,8 +70,8 @@ body.light {
 
   /* theme color */
   --theme-color: #1e80ff;
-  --theme-color-rgb: 30, 128, 255;
-
+  --theme-color-slate-rgb: 30, 128, 255;
+  --theme-color-rgb: 117, 171, 242;
   --scrollbar-track-bg: #fff;
   --scrollbar-thumb-hover-bg: #4a8fff;
 
@@ -138,10 +139,11 @@ body.light {
 }
 
 :root {
-  scroll-padding-top: 5rem; 
+  scroll-padding-top: 5rem;
 }
 
 body {
+  counter-reset: section;
   font-family: Arial, sans-serif;
   color: rgb(var(--font-color-rgb));
   background: linear-gradient(to bottom,
@@ -150,6 +152,7 @@ body {
 }
 
 section {
+  min-width: 50vw;
   height: calc(100vh - 5rem);
   margin: 0 auto;
   overflow: hidden;
@@ -159,16 +162,56 @@ section:last-child {
   height: calc(100vh - 10rem);
 }
 
-section h1 {
-  font-size: 2.5rem;
-  line-height: 4rem;
-  color: rgba(var(--theme-color-rgb, 0.8));
+section>h1 {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: baseline;
+  position: relative;
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 3rem);
+  white-space: nowrap;
+}
+
+section>h1::before {
+  position: relative;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 8px;
+  color: rgb(var(--theme-color-slate-rgb));
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: clamp(1rem, 1.8vw, 3rem);
+  font-weight: 400;
+}
+
+section>h1::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: rgb(var(--theme-color-line-rgb));
+}
+
+section .title h1 {
+  font-size: 4.5rem;
+  line-height: 6rem;
+  color: rgb(var(--theme-color-slate-rgb));
   font-weight: 600;
 }
 
-section h4 {
+section .title h2 {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: rgb(var(--theme-color-rgb));
+  font-weight: 600;
+}
+
+section .title h4 {
   font-size: 1.2rem;
-  color: var(--light-h4);
+  /* color: var(--light-h4); */
+  color: var(--logo-color);
 }
 
 /* ---- blog 列表 ---- */

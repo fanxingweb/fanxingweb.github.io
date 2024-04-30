@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
             <Content>{children}</Content>
             <Footer>
               <p>Welcome Fanxing&apos;s Web</p>
-              <p>这是我用来学习、记录、提升技能的个人网站</p>
+              <p>这是我用来记录学习的个人网站</p>
             </Footer>
           </LoadAnimation>
         </GlobalProvider>
