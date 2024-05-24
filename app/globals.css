@@ -241,6 +241,31 @@ section .title h4 {
   color: var(--theme-color);
 }
 
+.blog-anchor {
+  width: fit-content;
+  position: fixed;
+  top: 5rem;
+  bottom: 5rem;
+  right: 1rem;
+  padding: .5rem;
+  box-shadow: var(--blog-box-shadow);
+}
+
+.blog-anchor>.anchor {
+  display: flex;
+}
+
+.blog-anchor>.anchor::before {
+  position: relative;
+  counter-increment: section 1;
+  content: counter(section) ".";
+  margin-right: 8px;
+  /* color: rgb(var(--theme-color-slate-rgb)); */
+  /* font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace; */
+  /* font-size: clamp(1rem, 1.8vw, 3rem); */
+  /* font-weight: 400; */
+}
+
 /* ---- 透明背景下模糊滤镜 ---- */
 .opacity-bg-filter::before {
   content: "";
