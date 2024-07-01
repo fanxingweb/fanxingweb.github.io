@@ -241,14 +241,46 @@ section .title h4 {
   color: var(--theme-color);
 }
 
+.blog-more-container {
+  position: fixed;
+  bottom: 1rem;
+  right: .8rem;
+  padding: .1rem .5rem;
+  border-radius: .5rem;
+  box-shadow: var(--blog-box-shadow);
+}
+
+.blog-more {
+  cursor: pointer;
+  transition: color .8s;
+  transform: scale(1.5);
+}
+
+.blog-more:hover {
+  color: var(--theme-color);
+}
+
+.blog-more-activated {
+  color: var(--theme-color);
+}
+
 .blog-anchor {
   width: fit-content;
-  position: fixed;
-  top: 5rem;
-  bottom: 5rem;
-  right: 1rem;
+  position: absolute;
+  bottom: 2.5rem;
+  right: 0;
   padding: .5rem;
   box-shadow: var(--blog-box-shadow);
+  overflow: hidden auto;
+  border-radius: .8rem;
+  height: 0;
+  opacity: 0;
+  transition: all 1s cubic-bezier(.04,.14,.29,1.02);
+}
+
+.blog-anchor-show {
+  opacity: 1;
+  height: calc(100vh - 18rem);
 }
 
 .blog-anchor>.anchor {

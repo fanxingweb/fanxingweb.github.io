@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "159969",
+      "name": "more",
+      "font_class": "gengduo",
+      "unicode": "f0170",
+      "unicode_decimal": 983408
+    },
+    {
+      "icon_id": "5186496",
+      "name": "天蝎座",
+      "font_class": "tianxiezuo",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "7166568",
+      "name": "fanhui",
+      "font_class": "fanhui",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "25537507",
+      "name": "黑暗模式",
+      "font_class": "heianmoshi",
+      "unicode": "e7cb",
+      "unicode_decimal": 59339
+    },
+    {
+      "icon_id": "34451995",
+      "name": "明亮模式",
+      "font_class": "mingliangmoshi",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    }
+  ]
+}
