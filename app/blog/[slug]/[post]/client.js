@@ -62,21 +62,24 @@ export default function ClientComponent({ data }) {
           ["blog-more-activated"]: activated,
         })}
       ></span>
-      <div
-        className={cls("blog-anchor", {
-          ["blog-anchor-show"]: activated,
-        })}
-      >
-        {data?.nav?.map((anchor, idx) => (
-          <a
-            className="anchor progressive-display"
-            href={`#${anchor.toLowerCase()}`}
-            key={anchor}
-          >
-            <NavLink>{anchor}</NavLink>
-          </a>
-        ))}
-      </div>
+      {/* md为配置nav时，不展示导航 */}
+      {data?.nav && (
+        <div
+          className={cls("blog-anchor", {
+            ["blog-anchor-show"]: activated,
+          })}
+        >
+          {data.nav?.map((anchor, idx) => (
+            <a
+              className="anchor progressive-display"
+              href={`#${anchor.toLowerCase()}`}
+              key={anchor}
+            >
+              <NavLink>{anchor}</NavLink>
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
