@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { getNoteContentStaticProps } from "@/lib/tool";
+import { getAllNoteStaticPaths, getNoteContentStaticProps } from "@/lib/tool";
 
 const ClientComponent = dynamic(() => import("./client"), {
   ssr: false,
@@ -23,4 +23,8 @@ export default async function Page({ params }) {
       <ClientComponent data={data} />
     </>
   );
+}
+
+export async function getStaticPaths() {
+  return getAllNoteStaticPaths("slug", "post");
 }
