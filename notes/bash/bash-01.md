@@ -1,6 +1,7 @@
 ---
 title: Git常用指令
 date: 2024-07-05
+desc: 记录工作中经常用到的Git指令，方便于查找。
 ---
 
 # 1. set registry

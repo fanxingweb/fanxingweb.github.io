@@ -1,6 +1,7 @@
 ---
 title: Example Note
 date: 2023-04-27
+desc: markdown指令示例。
 ---
 
 # Hello, world!
