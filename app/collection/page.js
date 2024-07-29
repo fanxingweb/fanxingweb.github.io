@@ -7,7 +7,7 @@ export default function Page() {
     <div className="grid gap-6 mt-3 grid-cols-n-media">
       {collectionConfig.map((card, index) => (
         <a
-          className="collection-card w-56 h-24 overflow-hidden"
+          className="collection-card w-56 h-24 overflow-hidden opacity-0"
           key={`collection${index}`}
           href={card.link}
           target="_blank"

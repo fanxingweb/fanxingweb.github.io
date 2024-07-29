@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NavLink from "@/components/navLink";
+import ClientComponent from "@/app/blog/client";
 
 export default function BlogList({ notes }) {
   return (
@@ -10,8 +11,8 @@ export default function BlogList({ notes }) {
             <li className="mb-6" key={idx}>
               <Link
                 href={note.link}
-                className="blog-card display-opacity-0 progressive-display flex flex-col"
-                style={{ animationDelay: idx * 0.25 + "s" }}
+                className="blog-card opacity-0 flex flex-col"
+                // style={{ animationDelay: idx * 0.25 + "s" }}
               >
                 <header className="w-full flex justify-between leading-6 mb-3 font-sans">
                   <NavLink style={{ maxWidth: "72%" }}>{note.title}</NavLink>
@@ -24,15 +25,18 @@ export default function BlogList({ notes }) {
                   </p>
                 </header>
                 {note.desc && (
-                  <description className="w-11/12 ps-4 pe-4 text-xs font-serif">
+                  <p className="blog-desc w-11/12 ps-4 pe-4 text-xs font-serif">
                     {note.desc}
-                  </description>
+                  </p>
                 )}
               </Link>
             </li>
           ))}
         </ul>
       </div>
+
+      {/* 添加渐进式动画 */}
+      <ClientComponent />
     </div>
   );
 }

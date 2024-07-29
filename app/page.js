@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="display-opacity-0">
+      <section className="opacity-0">
         <div className="title" style={{ margin: "20% 0 1.5rem" }}>
           <h4>Hi, my name is</h4>
         </div>
@@ -28,10 +28,10 @@ export default function Home() {
           <h2>I am studying technology here.</h2>
         </div>
       </section>
-      <section className="display-opacity-0 pt-24">
+      <section className="opacity-0 pt-24">
         <h1>About me.</h1>
       </section>
-      <section className="display-opacity-0 pt-24">
+      <section className="opacity-0 pt-24">
         <h1>Work experience.</h1>
       </section>
     </>

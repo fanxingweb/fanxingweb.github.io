@@ -1,8 +1,4 @@
 /* 渐进式动画 */
-.display-opacity-0 {
-  opacity: 0;
-}
-
 .progressive-display {
   animation: fade-in 2s forwards;
 }
