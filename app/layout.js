@@ -4,6 +4,7 @@ import Content from "@/components/content";
 import Footer from "@/components/footer";
 import LoadAnimation from "@/components/loadAnimation";
 import GlobalProvider from "@/components/globalContext";
+import Scrollbar from "@/components/scrollBar";
 
 export const metadata = {
   title: "Fanxing's Web",
@@ -19,12 +20,14 @@ export default function RootLayout({ children }) {
       <body>
         <GlobalProvider>
           <LoadAnimation>
-            <Header />
-            <Content>{children}</Content>
-            <Footer>
-              <p>Welcome Fanxing&apos;s Web</p>
-              <p>这是我用来记录学习的个人网站</p>
-            </Footer>
+            <Scrollbar>
+              <Header />
+              <Content>{children}</Content>
+              <Footer>
+                <p>Welcome Fanxing&apos;s Web</p>
+                <p>这是我用来记录学习的个人网站</p>
+              </Footer>
+            </Scrollbar>
           </LoadAnimation>
         </GlobalProvider>
       </body>

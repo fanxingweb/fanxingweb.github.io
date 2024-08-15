@@ -120,7 +120,7 @@ body.light {
 
 /* 大屏幕（768px 到 992px） */
 @media (min-width: 768px) and (max-width: 992px) {
-  body {
+  :root {
     --collection-grid-cols-n: 3;
   }
 }
@@ -328,24 +328,25 @@ section .title h4 {
   transform: translateZ(0);
 }
 
-/* ---- 自定义滚动条 ---- */
-body::-webkit-scrollbar {
-  width: 8px;
-  /* 隐藏滚动条 */
-  /* display: none; */
+/* ---- prefect-scrollbar ---- */
+.ps__rail-x,
+.ps__rail-y {
+  z-index: 1000;
 }
 
-body::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-track-bg);
+.scrolling > .ps__rail-x,
+.scrolling > .ps__rail-y {
+  opacity: 0.6;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--theme-color-rgb), 0.2);
-  border-radius: 5px;
+.ps__thumb-x,
+.ps__thumb-y {
+  background: var(--scrollbar-thumb-hover-bg) !important;
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scrollbar-thumb-hover-bg);
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover {
+  background-color: var(--scrollbar-track-bg) !important;
 }
 
 /* ---- 加载logo ---- */
