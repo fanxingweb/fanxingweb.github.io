@@ -1,0 +1,210 @@
+@import url(./animate.css);
+
+/* ----------------------------
+ * logo
+ * ---------------------------- */
+.fx-logo span {
+  transition: 0.5s;
+}
+
+.fx-logo:hover span {
+  color: var(--theme-color);
+}
+
+.button-iphone {
+  transition: transform 0.5s;
+}
+.button-iphone:hover {
+  transform: scale(1.2);
+}
+
+/* ----------------------------
+ * transition-text-control
+ * ---------------------------- */
+.transition-text-control:hover {
+  color: var(--theme-color);
+}
+
+/* ----------------------------
+ * 导航 nav
+ * ---------------------------- */
+
+.nav-actived {
+  position: relative;
+  color: var(--theme-color) !important;
+  /* 发光阴影 */
+  text-shadow: 0 0 8px var(--theme-color), 0 0 10px var(--theme-color);
+}
+
+/*  */
+.search-divider {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+}
+
+.search-divider::before,
+.search-divider::after {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 50%;
+  border-top: 2px dashed var(--foreground);
+}
+
+.search-divider::before {
+  left: 0;
+  right: 58%;
+}
+.search-divider::after {
+  left: 58%;
+  right: 0;
+}
+
+/* ----------------------------
+ * 书签页面
+ * ---------------------------- */
+.bookmark-actived {
+  color: var(--theme-color) !important;
+  text-shadow: 0 0 8px var(--theme-color), 0 0 10px var(--theme-color);
+}
+
+.fx-bookmark div {
+  scroll-margin-top: 6rem; /* header 5rem + pt-4 1rem */
+}
+
+.bookmark-text-shadow {
+  text-shadow: 2px 2px 3px var(--foreground);
+}
+
+/* ----------------------------
+ * section
+ * ---------------------------- */
+section {
+  min-width: 70vw;
+  height: calc(100vh - 5rem);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* section:last-child {
+  height: calc(100vh - 10rem);
+} */
+
+section > h1 {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: baseline;
+  position: relative;
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 3rem);
+  white-space: nowrap;
+}
+
+section > h1::before {
+  position: relative;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 8px;
+  color: rgb(var(--theme-color-slate-rgb));
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: clamp(1rem, 1.8vw, 3rem);
+  font-weight: 400;
+}
+
+section > h1::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: rgb(var(--theme-color-line-rgb));
+}
+
+section .title h1 {
+  font-size: 4.5rem;
+  line-height: 6rem;
+  color: rgb(var(--theme-color-slate-rgb));
+  font-weight: 600;
+}
+
+section .title h2 {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: rgb(var(--theme-color-rgb));
+  font-weight: 600;
+}
+
+section .title h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* color: var(--light-h4); */
+  color: var(--foreground);
+}
+
+/* ----------------------------
+ * 美女卡片
+ * ---------------------------- */
+.beauty-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 15px;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-weight: 900;
+  transition-duration: 0.2s;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.beauty-card:before,
+.beauty-card:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 10px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.beauty-card:after {
+  filter: blur(100px);
+}

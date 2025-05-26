@@ -1,0 +1,44 @@
+#progress {
+  stroke-dasharray: 269;
+  stroke-dashoffset: 269;
+}
+
+.logo-text {
+  opacity: 0;
+  font-weight: 600;
+}
+
+.loading_animate_wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading_animate_wrapper-hidden {
+  animation: zoomHide 0.8s forwards;
+}
+
+.logo-text-show {
+  animation: textShow 1s forwards;
+}
+
+@keyframes textShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomHide {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}

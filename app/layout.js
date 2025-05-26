@@ -1,35 +1,58 @@
+import localFont from "next/font/local";
+// import { appWithTranslation } from "next-i18next";
+
+import ClientI18nComponent from "@/layouts/client-i18n-component";
+import ClientThemeComponent from "@/theme/components/client-theme-component";
+import ClientScrollbar from "@/components/client-scrollbar";
+import ClientScrollbarContainer from "@/layouts/client-scrollbar-container";
+import ClientInitLoading from "@/layouts/client-init-animate";
+import ClientHeader from "@/layouts/client-header";
+
 import "./globals.css";
-import Header from "@/components/header";
-import Content from "@/components/content";
-import Footer from "@/components/footer";
-import LoadAnimation from "@/components/loadAnimation";
-import GlobalProvider from "@/components/globalContext";
-import Scrollbar from "@/components/scrollBar";
+import Footer from "@/layouts/footer";
+import Script from "next/script";
+import ClientSearchModal from "@/components/client-search-modal";
+
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 
 export const metadata = {
-  title: "Fanxing's Web",
-  description: "凡星（fanxing）的个人小站，记录学习。",
-  keyword: "react,next.js,javascript,js,css,web,blog",
-  author: "fanxing",
-  robots: "index,follow",
+  title: "Fanxing's web",
+  description: "Private way station",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <GlobalProvider>
-          <LoadAnimation>
-            <Scrollbar>
-              <Header />
-              <Content>{children}</Content>
-              <Footer>
-                <p>Welcome Fanxing&apos;s Web</p>
-                <p>这是我用来记录学习的个人网站</p>
-              </Footer>
-            </Scrollbar>
-          </LoadAnimation>
-        </GlobalProvider>
+      <head>
+        {/* 导入 iconfont symbol 类型 */}
+        <Script src="/iconfont/iconfont.js" />
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
+      >
+        <ClientI18nComponent>
+          <ClientThemeComponent>
+            <ClientInitLoading>
+              <ClientScrollbarContainer>
+                <ClientHeader />
+                {children}
+                {/* <Footer /> */}
+              </ClientScrollbarContainer>
+            </ClientInitLoading>
+          </ClientThemeComponent>
+        </ClientI18nComponent>
+
+        {/* 搜索弹窗 */}
+        <ClientSearchModal />
       </body>
     </html>
   );

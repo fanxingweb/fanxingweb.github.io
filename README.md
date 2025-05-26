@@ -1,2 +1,2 @@
 # fanxingweb.github.io
-个人小站，记录学习。
+记录学习的个人小站。

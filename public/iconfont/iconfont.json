@@ -1,16 +1,37 @@
 {
-  "id": "",
-  "name": "",
+  "id": "4778511",
+  "name": "FanxingWeb",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
-  "description": "",
+  "description": "个人小站",
   "glyphs": [
+    {
+      "icon_id": "11372706",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    },
+    {
+      "icon_id": "3904420",
+      "name": "iPhoneX",
+      "font_class": "phone",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "18176389",
+      "name": "随机",
+      "font_class": "random",
+      "unicode": "ea7c",
+      "unicode_decimal": 60028
+    },
     {
       "icon_id": "159969",
       "name": "more",
       "font_class": "gengduo",
-      "unicode": "f0170",
-      "unicode_decimal": 983408
+      "unicode": "e600",
+      "unicode_decimal": 58880
     },
     {
       "icon_id": "5186496",
@@ -25,20 +46,6 @@
       "font_class": "fanhui",
       "unicode": "e643",
       "unicode_decimal": 58947
-    },
-    {
-      "icon_id": "25537507",
-      "name": "黑暗模式",
-      "font_class": "heianmoshi",
-      "unicode": "e7cb",
-      "unicode_decimal": 59339
-    },
-    {
-      "icon_id": "34451995",
-      "name": "明亮模式",
-      "font_class": "mingliangmoshi",
-      "unicode": "e61d",
-      "unicode_decimal": 58909
     }
   ]
 }
