@@ -120,9 +120,19 @@ body {
 }
 
 @media screen and (max-width: 1079px) {
-  .auto-hidden-on-1080 {
+  .auto-hidden-on-w1080 {
     display: none;
   }
+}
+
+@media screen and (max-height: 429px)  {
+  .auto-hidden-on-h430 {
+    display: none;
+  }
+}
+
+@media (max-height: 430px) {
+  /* 当视口高度小于等于430px时应用的样式 */
 }
 
 @layer utilities {

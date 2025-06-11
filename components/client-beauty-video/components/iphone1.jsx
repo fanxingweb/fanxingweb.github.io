@@ -9,7 +9,8 @@ export default function Iphone1({
   return (
     <div
       className={cls("h-full p-6", {
-        ["auto-hidden-on-1080"]: autoHidden,
+        ["auto-hidden-on-w1080"]: autoHidden,
+        ["auto-hidden-on-h430"]: autoHidden,
       })}
     >
       <div

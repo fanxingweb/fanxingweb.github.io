@@ -11,7 +11,8 @@ export default function Card1({
   return (
     <div
       className={cls("h-full p-6", {
-        ["auto-hidden-on-1080"]: autoHidden,
+        ["auto-hidden-on-w1080"]: autoHidden,
+        ["auto-hidden-on-h430"]: autoHidden,
       })}
     >
       <div className={`mx-auto w-full ${videoConfig.aspect} beauty-card`}>
